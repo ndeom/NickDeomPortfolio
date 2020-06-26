@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap");
+
+$satin-black: #343434;
+
+@keyframes glitch {
+  0% {
+    left: -2px;
+    bottom: -2px;
+  }
+  25% {
+    left: -1px;
+    bottom: 3px;
+  }
+  50% {
+    left: 2px;
+    bottom: 2px;
+  }
+  75% {
+    left: 2px;
+    bottom: 1px;
+  }
+}
+
+#about {
+  padding-top: 150px;
+  font-family: "Playfair Display", serif;
+  color: $satin-black;
+  #about-content {
+    width: 60%;
+    margin-left: 10%;
+    p {
+      font-family: "Inconsolata";
+    }
+
+    #about-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    #job-list {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        position: relative;
+
+        .company {
+          font-family: "Montserrat", sans-serif;
+          font-size: 30px;
+          font-weight: 600;
+          -webkit-text-stroke: 1px black;
+          color: white;
+          &:hover {
+            color: $satin-black;
+            -webkit-text-stroke: 1px white;
+          }
+          &:hover:after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: -1px;
+            z-index: -1;
+            background-color: $satin-black;
+            width: calc(100% + 2px);
+            height: 32px;
+            animation: glitch 2000ms linear infinite;
+          }
+        }
+      }
+      .role {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+      }
+    }
+    hr {
+      width: 50%;
+      margin: 0;
+    }
+  }
+
+  #footer {
+    position: fixed;
+    bottom: 0;
+  }
+}

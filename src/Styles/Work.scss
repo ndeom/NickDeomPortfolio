@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$frame-width: 100vw * 0.6;
+
+@mixin dimension($width) {
+  width: $width;
+  height: $width * 9 / 16;
+}
+
+#work {
+  padding-top: 150px;
+  font-family: "Inconsolata", serif;
+
+  #work-content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    #work-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    h3 {
+      font-family: "Anonymous Pro";
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .project {
+      margin: 0 0 3rem 0;
+      width: $frame-width;
+      align-self: center;
+      .placeholder {
+        @include dimension($frame-width);
+        background-color: #ffffff;
+        box-shadow: 0px 8px 40px -10px black;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$satin-black: #343434;
+
+@keyframes glitch {
+  0% {
+    left: -2px;
+    bottom: -2px;
+  }
+  25% {
+    left: -1px;
+    bottom: 3px;
+  }
+  50% {
+    left: 2px;
+    bottom: 2px;
+  }
+  75% {
+    left: 2px;
+    bottom: 1px;
+  }
+}
+
+#contact {
+  padding-top: 150px;
+  font-family: "Anonymous Pro", serif;
+
+  #contact-content {
+    width: 80%;
+    margin: auto;
+
+    #contact-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    p {
+      font-family: "Inconsolata", monospace;
+
+      a {
+        font-family: "Anonymous Pro";
+        font-weight: bold;
+        color: $satin-black;
+        text-decoration: none;
+        position: relative;
+        &:hover {
+          color: white;
+        }
+        &:hover:after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          left: 0;
+          height: 1rem;
+          width: calc(100% + 2px);
+          background-color: $satin-black;
+          animation: glitch 2000ms linear infinite;
+        }
+      }
+    }
+  }
+
+  #footer {
+    position: fixed;
+    bottom: 0;
+  }
+}

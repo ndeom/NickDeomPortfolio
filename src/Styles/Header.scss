@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$satin-black: #343434;
+
+@keyframes glitch {
+  0% {
+    left: -2px;
+    bottom: -2px;
+  }
+  25% {
+    left: -1px;
+    bottom: 3px;
+  }
+  50% {
+    left: 2px;
+    bottom: 2px;
+  }
+  75% {
+    left: 2px;
+    bottom: 1px;
+  }
+}
+
+@keyframes revolve {
+  0% {
+    text-shadow: -1px 1px blue, 1px -1px red;
+  }
+  25% {
+    text-shadow: -1px -1px blue, 1px 1px red;
+  }
+  50% {
+    text-shadow: 1px -1px blue, -1px 1px red;
+  }
+  75% {
+    text-shadow: 1px 1px blue, -1px -1px red;
+  }
+  100% {
+    text-shadow: -1px 1px blue, 1px -1px red;
+  }
+}
+
+header {
+  width: 100%;
+  position: fixed;
+
+  nav {
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      color: $satin-black;
+      z-index: 10;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      line-height: 44px;
+      font-weight: bold;
+      letter-spacing: -2px;
+      margin-top: 1rem;
+    }
+
+    #nav-list {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      list-style-type: none;
+
+      .nav-item {
+        /*padding: 0 1rem;*/
+        margin: 0 1rem;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: 700;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &:hover {
+          color: white;
+        }
+        &:hover:after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          height: 1rem;
+          width: calc(100% + 2px);
+          background-color: $satin-black;
+          animation: glitch 2000ms linear infinite;
+        }
+        &.active {
+          color: white;
+          text-shadow: -1px 1px blue, 1px -1px red;
+          animation: revolve 4000ms linear infinite;
+          &:after {
+            content: "";
+            color: white;
+            z-index: -1;
+            position: absolute;
+            left: -4px;
+            top: -3px;
+            height: 1rem;
+            width: calc(100% + 2px);
+            background-color: $satin-black;
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+}
