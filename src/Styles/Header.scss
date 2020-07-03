@@ -44,6 +44,7 @@ $satin-black: #343434;
 header {
   width: 100%;
   position: fixed;
+  z-index: 10;
 
   nav {
     width: 100%;
@@ -63,6 +64,7 @@ header {
       font-weight: bold;
       letter-spacing: -2px;
       margin-top: 1rem;
+      margin-bottom: 2rem;
     }
 
     #nav-list {
@@ -72,7 +74,6 @@ header {
       list-style-type: none;
 
       .nav-item {
-        /*padding: 0 1rem;*/
         margin: 0 1rem;
         font-family: "Anonymous Pro", monospace;
         font-weight: 700;

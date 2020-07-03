@@ -7,19 +7,19 @@ $satin-black: #343434;
 
 @keyframes glitch {
   0% {
-    left: -2px;
+    left: 2px;
     bottom: -2px;
   }
   25% {
-    left: -1px;
+    left: 3px;
     bottom: 3px;
   }
   50% {
-    left: 2px;
+    left: 6px;
     bottom: 2px;
   }
   75% {
-    left: 2px;
+    left: 6px;
     bottom: 1px;
   }
 }
@@ -29,10 +29,10 @@ $satin-black: #343434;
   font-family: "Playfair Display", serif;
   color: $satin-black;
   #about-content {
-    width: 60%;
+    width: 65%;
     margin-left: 10%;
     p {
-      font-family: "Inconsolata";
+      font-family: "Inconsolata", monospace;
     }
 
     #about-title {
@@ -41,38 +41,58 @@ $satin-black: #343434;
       letter-spacing: -1px;
     }
 
-    #job-list {
+    .job-list {
       list-style-type: none;
-      a {
-        text-decoration: none;
-        position: relative;
+      padding: 0;
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.5rem 0;
 
-        .company {
-          font-family: "Montserrat", sans-serif;
-          font-size: 30px;
-          font-weight: 600;
-          -webkit-text-stroke: 1px black;
-          color: white;
-          &:hover {
-            color: $satin-black;
-            -webkit-text-stroke: 1px white;
-          }
-          &:hover:after {
-            content: "";
-            position: absolute;
-            left: 0px;
-            bottom: -1px;
-            z-index: -1;
-            background-color: $satin-black;
-            width: calc(100% + 2px);
-            height: 32px;
-            animation: glitch 2000ms linear infinite;
+        .arrow {
+          align-items: flex-end;
+        }
+        a {
+          text-decoration: none;
+          position: relative;
+          color: $satin-black;
+          display: flex;
+          align-items: flex-end;
+          .company {
+            position: relative;
+            margin: 0 0.25rem;
+            line-height: 30px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            -webkit-text-stroke: 1px black;
+            color: white;
+            &:hover {
+              color: $satin-black;
+              -webkit-text-stroke: 1px white;
+            }
+            &:hover:after {
+              content: "";
+              position: absolute;
+              left: 4px;
+              bottom: -1px;
+              z-index: -1;
+              background-color: $satin-black;
+              width: calc(100% + 2px);
+              height: 32px;
+              animation: glitch 2000ms linear infinite;
+            }
           }
         }
       }
-      .role {
+
+      .role,
+      .dates {
         font-family: "Montserrat", sans-serif;
         font-weight: 300;
+        display: flex;
+        align-items: flex-end;
+        margin-right: 0.5rem;
       }
     }
     hr {
@@ -84,5 +104,21 @@ $satin-black: #343434;
   #footer {
     position: fixed;
     bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #about {
+    #footer {
+      position: static;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #about {
+    #about-content {
+      width: 80%;
+    }
   }
 }

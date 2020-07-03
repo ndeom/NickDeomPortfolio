@@ -7,35 +7,34 @@ import GithubSVG from "../Icons/GithubSVG";
 export default function Footer() {
   return (
     <div id="sidebar">
-      <ul id="sidebar-icon-list">
-        <li>
-          <a
-            href="https://www.linkedin.com/in/nicholas-deom-4546ab71/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInSVG />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/ndeom"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GithubSVG />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/nick.deom/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramSVG />
-          </a>
-        </li>
-      </ul>
+      <SideBarList>
+        <SideBarListItem
+          href={"https://www.linkedin.com/in/nicholas-deom-4546ab71/"}
+          icon={<LinkedInSVG />}
+        />
+        <SideBarListItem
+          href={"https://github.com/ndeom"}
+          icon={<GithubSVG />}
+        />
+        <SideBarListItem
+          href={"https://www.instagram.com/nick.deom/"}
+          icon={<InstagramSVG />}
+        />
+      </SideBarList>
     </div>
+  );
+}
+
+function SideBarList(props) {
+  return <ul id="sidebar-icon-list">{props.children}</ul>;
+}
+
+function SideBarListItem(props) {
+  return (
+    <li>
+      <a href={props.href} target="_blank" rel="noopener noreferrer">
+        {props.icon}
+      </a>
+    </li>
   );
 }

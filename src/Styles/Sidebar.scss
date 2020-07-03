@@ -22,7 +22,7 @@ $stroke-highlight: #343434;
 
         #linkedin-logo {
           stroke: $icon-stroke;
-          fill: white;
+          fill: none;
           &:hover {
             stroke-width: 2px;
             stroke: $stroke-highlight;
@@ -30,7 +30,7 @@ $stroke-highlight: #343434;
         }
 
         #github-logo {
-          fill: white;
+          fill: none;
           stroke-width: 0.5px;
           stroke: $icon-stroke;
           &:hover {
@@ -40,7 +40,7 @@ $stroke-highlight: #343434;
         }
 
         #instagram-logo {
-          fill: white;
+          fill: none;
           stroke-width: 0.5px;
           stroke: $icon-stroke;
           &:hover {

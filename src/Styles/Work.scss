@@ -2,11 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$frame-width: 100vw * 0.6;
+$satin-black: #343434;
 
-@mixin dimension($width) {
-  width: $width;
-  height: $width * 9 / 16;
+@keyframes glitch {
+  0% {
+    left: -2px;
+    bottom: -2px;
+  }
+  25% {
+    left: -1px;
+    bottom: 3px;
+  }
+  50% {
+    left: 2px;
+    bottom: 2px;
+  }
+  75% {
+    left: 2px;
+    bottom: 1px;
+  }
 }
 
 #work {
@@ -25,19 +39,30 @@ $frame-width: 100vw * 0.6;
       letter-spacing: -2px;
     }
 
-    h3 {
-      font-family: "Anonymous Pro";
-      font-size: 26px;
-      font-weight: 700;
-    }
-    .project {
-      margin: 0 0 3rem 0;
-      width: $frame-width;
-      align-self: center;
-      .placeholder {
-        @include dimension($frame-width);
-        background-color: #ffffff;
-        box-shadow: 0px 8px 40px -10px black;
+    p {
+      line-height: 20px;
+      .emphasis {
+        position: relative;
+        font-family: "Anonymous Pro";
+        font-weight: 700;
+
+        .project-link {
+          text-decoration: none;
+          color: $satin-black;
+          &:hover {
+            color: white;
+          }
+          &:hover:after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            height: 1rem;
+            width: calc(100% + 2px);
+            background-color: $satin-black;
+            animation: glitch 2000ms linear infinite;
+          }
+        }
       }
     }
   }

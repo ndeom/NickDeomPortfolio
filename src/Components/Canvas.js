@@ -3,14 +3,17 @@ import Sketch from "react-p5";
 import "../Styles/Canvas.scss";
 
 export default class Canvas extends React.Component {
-  x = 50;
-  y = 50;
   points = [];
+
   setup = (p5, canvasParentRef) => {
-    p5.createCanvas(500, 500).parent(canvasParentRef);
+    window.innerWidth < 500
+      ? p5.createCanvas(300, 300).parent(canvasParentRef)
+      : p5.createCanvas(500, 500).parent(canvasParentRef);
+
     p5.pixelDensity(1);
     let height = p5.height;
     let width = p5.width;
+
     for (let i = 0; i < 25; i++) {
       this.points[i] = p5.createVector(
         Math.floor(Math.random() * width),
@@ -21,7 +24,8 @@ export default class Canvas extends React.Component {
   };
 
   draw = (p5) => {
-    console.time("draw");
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
     let height = p5.height;
     let width = p5.width;
     p5.loadPixels();
@@ -46,14 +50,13 @@ export default class Canvas extends React.Component {
       }
     }
     p5.updatePixels();
-    console.timeEnd("draw");
   };
 
   render() {
     return (
       <div id="canvas">
         <Sketch setup={this.setup} draw={this.draw} />
-        Worley Noise algorithm using P5.js
+        Worley Noise
       </div>
     );
   }
