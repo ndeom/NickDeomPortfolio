@@ -6,4 +6,3 @@ take the dive into software development. I want to work somewhere
 where I can meaningfully contribute to projects I work on, build on my
 skills, and help to innovate in a fast paced and ever-evolving
 industry.
-klsf
