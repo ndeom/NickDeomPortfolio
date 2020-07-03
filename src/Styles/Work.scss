@@ -39,6 +39,12 @@ $satin-black: #343434;
       letter-spacing: -2px;
     }
 
+    .project {
+      .project-title {
+        line-height: 26px;
+      }
+    }
+
     p {
       line-height: 20px;
       .emphasis {
