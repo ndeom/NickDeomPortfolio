@@ -9,5 +9,22 @@ $header-offset: 150px;
   padding-top: $header-offset;
   font-family: "Playfair Display", serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  #canvas-annotation {
+    width: 500px;
+    text-align: center;
+    font-family: "Inconsolata", monospace;
+    padding-top: 2rem;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #home {
+    #canvas-annotation {
+      width: 300px;
+    }
+  }
 }

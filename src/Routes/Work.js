@@ -12,7 +12,11 @@ export default function Work() {
     <div id="work">
       <div id="work-content">
         <h2 id="work-title">work</h2>
-        <Project title={"StockBOT"} src={StockBOTImg}>
+        <Project
+          title={"StockBOT"}
+          src={StockBOTImg}
+          projectLink={"https://stockbotio.herokuapp.com/"}
+        >
           <p>
             StockBOT is a game where you play against a machine learning
             algorithm and the market to see who can get the biggest return on
@@ -47,7 +51,11 @@ export default function Work() {
             .
           </p>
         </Project>
-        <Project title={"Job.Scrape()"} src={JobScrapeImg}>
+        <Project
+          title={"Job.Scrape()"}
+          src={JobScrapeImg}
+          projectLink={"https://jobscrapeio.herokuapp.com/"}
+        >
           <p>
             Job.Scrape() is a web scraper that collects recent job postings from
             Stack Overflow, Hacker News, and TripleByte and makes them available
@@ -93,7 +101,11 @@ export default function Work() {
             .
           </p>
         </Project>
-        <Project title={"Portfolio"} src={PortfolioImg}>
+        <Project
+          title={"Portfolio"}
+          src={PortfolioImg}
+          projectLink={"https://github.com/ndeom/NickDeomPortfolio"}
+        >
           <p>
             This website was made with <span className="emphasis">React</span>,{" "}
             <span className="emphasis">SASS</span>, and{" "}
@@ -126,7 +138,7 @@ export default function Work() {
             end. <span className="emphasis">React</span>,{" "}
             <span className="emphasis">D3</span>, and{" "}
             <span className="emphasis">SASS</span> are used to give the model a
-            modern interface.
+            modern interface. No code to show just yet.
           </p>
         </Project>
       </div>

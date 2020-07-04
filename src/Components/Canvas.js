@@ -56,7 +56,6 @@ export default class Canvas extends React.Component {
     return (
       <div id="canvas">
         <Sketch setup={this.setup} draw={this.draw} />
-        Worley Noise
       </div>
     );
   }

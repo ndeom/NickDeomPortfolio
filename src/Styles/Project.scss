@@ -21,6 +21,10 @@ h3 {
   margin: 0 0 3rem 0;
   width: $frame-width;
   align-self: center;
+  .title-link {
+    text-decoration: none;
+    color: $satin-black;
+  }
   .project-image {
     @include dimension($frame-width);
     background-color: #ffffff;
