@@ -130,15 +130,20 @@ export default function Work() {
           </div>
           <p>
             This project is in the early stages of development and is a
-            collaboration between myself and a personal friend. The app is meant
-            to be a teaching tool that visualizes the formation and breakage of
-            liquid droplets. When provided parameters it uses{" "}
+            collaboration between myself and a Ph. D. Student at Purdue (a
+            personal friend). This app is meant to be a teaching tool that
+            visualizes the formation and breakup of liquid droplets from a leaky
+            faucet (like the one in your kitchen). Unlike the faucet in your
+            kitchen, here you will be able to change Earth's gravitational
+            constant and the physical properties of the fluid (e.g. viscosity)
+            on the fly. When these parameters are provided, the app uses{" "}
             <span className="emphasis">Node</span> to spawn a child process and
-            run a <span className="emphasis">Fortran</span> model on the back
-            end. <span className="emphasis">React</span>,{" "}
+            run a computational fluid dynamics simulation (
+            <span className="emphasis">Fortran</span>) on the back end.{" "}
+            <span className="emphasis">React</span>,{" "}
             <span className="emphasis">D3</span>, and{" "}
             <span className="emphasis">SASS</span> are used to give the model a
-            modern interface. No code to show just yet.
+            modern interface. No app to show just yet.
           </p>
         </Project>
       </div>
