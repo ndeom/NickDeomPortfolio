@@ -21,7 +21,7 @@ export default function About() {
             href={"https://www.swri.org/"}
             company={"SwRI"}
             role={"Process Development Engineer"}
-            dates={"July 2017 - March 2020"}
+            dates={"July 2017 - April 2020"}
           />
           <ListItem
             href={
