@@ -6,12 +6,70 @@ import JobScrapeImg from "../Images/Job_Scrape_Img.png";
 import FluidDynamicsImg from "../Images/React_AppImg.png";
 import StockBOTImg from "../Images/StockBOTImg.png";
 import PortfolioImg from "../Images/Portfolio_Img.png";
+import TindifyImg from "../Images/Tindify_Img.png";
 
 export default function Work() {
   return (
     <div id="work">
       <div id="work-content">
         <h2 id="work-title">work</h2>
+        <Project
+          title={"Tindify"}
+          src={TindifyImg}
+          projectLink={"https://tindify.netlify.app"}
+        >
+          <p>
+            Tindify is an app for people who want to browse the Spotify catalog
+            in a more interactive way (or millenials that can't get enough of
+            dating app mechanics). It uses the Spotify API to display category,
+            playlist, and song information and allows users to curate a
+            "Tindify" playlist by swiping song cards left or right. Cards that
+            are swiped left are ignored, but cards that are swiped right are
+            added to the user's Tindify playlist, similar to how the popular
+            dating app Tinder works. Users can also alter their playlist by
+            navigating to the "My Tindify" route. The app uses{" "}
+            <span className="emphasis">React</span> and{" "}
+            <span className="emphasis">React Spring</span> for the front end and{" "}
+            <span className="emphasis">Node</span> for the API that handles JSON
+            Web Tokens (JWTs). Here are links to the{" "}
+            <span className="emphasis">
+              <a
+                className="project-link"
+                href="https://tindify.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                live demo
+              </a>
+            </span>{" "}
+            and the{" "}
+            <span className="emphasis">
+              <a
+                className="project-link"
+                href="https://github.com/ndeom/Tindify"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github repo
+              </a>
+            </span>
+            . I am in the process of writing tests for the app with{" "}
+            <span className="emphasis">Jest</span> and the{" "}
+            <span className="emphasis">React Testing Library</span> and hope to
+            be done soon. The app requires that you have a Spotify account, so{" "}
+            <span className="emphasis">
+              <a
+                className="project-link"
+                href="https://drive.google.com/file/d/1GiouK2TN3BG_JeP75VzUrrXctm8WUpO6/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                here
+              </a>
+            </span>{" "}
+            is a video for those who don't have one.
+          </p>
+        </Project>
         <Project
           title={"StockBOT"}
           src={StockBOTImg}
