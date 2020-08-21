@@ -53,10 +53,9 @@ export default function Work() {
                 Github repo
               </a>
             </span>
-            . I am in the process of writing tests for the app with{" "}
-            <span className="emphasis">Jest</span> and the{" "}
-            <span className="emphasis">React Testing Library</span> and hope to
-            be done soon. The app requires that you have a Spotify account, so{" "}
+            . Tests are written using <span className="emphasis">Jest</span> and
+            the <span className="emphasis">React Testing Library</span>. The app
+            requires that you have a Spotify account, so{" "}
             <span className="emphasis">
               <a
                 className="project-link"
